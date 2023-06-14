@@ -1,0 +1,128 @@
+/* RESET */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+nav,
+section,
+div,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* GLOBAL */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/* NAVBAR */
+nav {
+  background-color: #ffdd88;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+nav > div {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.home-icon {
+  width: 50px;
+  margin-left: 1rem;
+}
+
+.nav-links {
+  min-width: 20%;
+  justify-content: space-evenly;
+}
+
+/* MAIN */
+main.hero-section {
+  /* background-color: #fceedc; */
+  background: linear-gradient(45deg, #fceedc, #fceedc 70%, white);
+  height: 800px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.main-title-container {
+  grid-column: 1/3;
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+span.cursor {
+  display: inline-block;
+  width: 4px;
+  height: 3rem;
+  border: 0.5px solid black;
+  background-color: black;
+  position: relative;
+  margin-left: 5px;
+  opacity: 1;
+}
+
+span.cursor.flickering {
+  animation: 1s cursor infinite step-start;
+}
+
+@keyframes cursor {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-img-container {
+  grid-column: 3;
+  grid-row: 1/4;
+}
+
+.hero-img-container > img {
+  position: relative;
+  top: 20%;
+}
+
+.hero-text {
+  background-image: url("../images/Rectangle_4130.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 80%;
+  height: 70%;
+  margin-left: 3rem;
+  grid-column: 1/3;
+  grid-row: 2/4;
+  position: relative;
+}
+
+.hero-text p {
+  position: relative;
+  top: 5rem;
+  padding: 0 20px;
+}
+
