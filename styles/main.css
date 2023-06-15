@@ -72,6 +72,12 @@ h1 {
   font-size: 3.5rem;
 }
 
+span.title-passion {
+  background: linear-gradient(to left, #090979, #00d4ff);
+  background-size: 100%;
+  background-clip: text;-webkit-background-clip: text;color: transparent;
+}
+
 span.cursor {
   display: inline-block;
   width: 4px;
@@ -79,7 +85,7 @@ span.cursor {
   border: 0.5px solid black;
   background-color: black;
   position: relative;
-  margin-left: 5px;
+  margin-left: 10px;
   opacity: 1;
 }
 
