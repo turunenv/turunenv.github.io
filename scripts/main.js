@@ -1,6 +1,4 @@
-/* requestanimationframe tells the browser that you want to perform
-   an animation and requests that the browser calls a specific function
-   to update an animation right before the next repaint */
+/* MAIN TITLE ANIMATION */
 
 const title = document.querySelector(".title-intro");
 const cursor = document.querySelector(".cursor");
@@ -19,7 +17,7 @@ const passionList = [
   "mathematics",
   "creating",
   "reading",
-  "learning",
+  "learning.",
 ];
 
 let nextWaitTime;
@@ -46,12 +44,9 @@ function updateMainTitle(timeStamp) {
       }
     } else {
       //write each passion one by one, leave the last one on the screen
-      console.log(passionListIdx);
       let passionText = passionList[passionListIdx];
       let passionLen = passionList[passionListIdx].length;
       let currentLen = passion.textContent.length;
-
-      console.log(`currentLen: ${currentLen}, passionLen: ${passionLen}`);
 
       if (currentLen < passionLen) {
         if (!erasing) {
@@ -70,7 +65,6 @@ function updateMainTitle(timeStamp) {
             erasing = false;
             cursor.classList.add("flickering");
 
-            console.log("increasint idx...");
             passionListIdx++;
           }
         }
@@ -81,7 +75,7 @@ function updateMainTitle(timeStamp) {
           cursor.classList.add("flickering");
           setTimeout(() => {
             cursor.style.display = "none";
-          }, 3000)
+          }, 3000);
 
           return;
         }
@@ -115,3 +109,17 @@ function updateMainTitle(timeStamp) {
 
 //this call is one off - so we need to call it again inside updateMainTitle
 requestAnimationFrame(updateMainTitle);
+
+/* ABOUT ME SCROLL */
+let firstImg = document.querySelector(".about-me img:first-child");
+let secondImg = document.querySelector(".about-me div + img");
+let firstText = document.querySelector(".about-me img + div");
+let secondText = document.querySelector(".about-me div:first-child");
+
+
+document.addEventListener("scroll", () => {
+  if (scrollY >= 300) {
+    firstImg.style.opacity = 1;
+    secondImg.style.opacity = 1;
+  }
+});

@@ -75,7 +75,10 @@ h1 {
 span.title-passion {
   background: linear-gradient(to left, #090979, #00d4ff);
   background-size: 100%;
-  background-clip: text;-webkit-background-clip: text;color: transparent;
+  background-clip: text;
+  -webkit-background-clip: 
+  text;
+  color: transparent;
 }
 
 span.cursor {
@@ -114,6 +117,8 @@ span.cursor.flickering {
 
 .hero-text {
   background-image: url("../images/Rectangle_4130.svg");
+  text-align: justify;
+  text-justify: inter-word;
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 1.5rem;
@@ -131,4 +136,58 @@ span.cursor.flickering {
   top: 5rem;
   padding: 0 20px;
 }
+
+
+/* ABOUT ME */
+
+.about-me {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.about-me-text {
+  width: 50%;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  position: relative;
+  
+}
+
+.about-me-text {
+  padding: 40px 30px 20px 150px;
+  text-align: justify;
+  text-justify: inter-word;
+  transition: left 1s ease-out, right 1s ease-out;
+}
+
+img + .about-me-text {
+  padding: 40px 150px 20px 30px;
+}
+
+.about-me img {
+  height: 300px;
+  width: 50%;
+  padding: 2rem;
+  position: relative;
+  opacity: 0;
+}
+
+.about-me img:first-child {
+  transition: opacity 1s linear;
+}
+
+.about-me div + img {
+  transition: opacity 1s linear 0.5s;
+}
+
+
+/* FOOTER */
+footer {
+  height: 140px;
+  background-color: #ffdd88;
+  margin-top: 40px;
+}
+
 
