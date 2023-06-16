@@ -22,10 +22,10 @@
   <main class="hero-section">
     <div class="main-title-container">
       <h1 class="main-title">
-        <span class="title-intro"></span>
+        <span class="title-intro"></span><br class="title-divider">
         <span class="title-passion"></span>
+        <span class="cursor flickering"></span>
       </h1>
-      <span class="cursor flickering"></span>
     </div>
     <div class="hero-text">
       <p>
@@ -36,7 +36,12 @@
       
     </div>
     <div class="hero-img-container">
-      <img src="images/hero-image.png">
+      <img 
+        srcset="images/hero-image-small.png 258w, images/hero-image-med.png 356w, images/hero-image.png 444w"
+        sizes= "(max-width: 500px) 258px, (max-width: 1200px) 356px, 444px"
+        src="images/hero-image.png" 
+        alt="a picture of Verneri Turunen"
+        >
     </div>
   </main>
 
