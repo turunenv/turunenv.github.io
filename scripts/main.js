@@ -1,7 +1,8 @@
 /* MAIN TITLE ANIMATION */
 
 const title = document.querySelector(".title-intro");
-const cursor = document.querySelector(".cursor");
+const beforeCursor = document.querySelector(".cursor.before-passion");
+const afterCursor = document.querySelector(".cursor.after-passion");
 const passion = document.querySelector(".title-passion");
 
 let start, prevTimeStamp;
@@ -25,24 +26,26 @@ let nextWaitTime;
 function updateMainTitle(timeStamp) {
   if (start === undefined) {
     start = timeStamp;
-    nextWaitTime = 2000;
+    nextWaitTime = 1500;
   }
 
   const elapsed = timeStamp - start;
 
   if (prevTimeStamp !== timeStamp && elapsed >= nextWaitTime) {
-    if (nextWaitTime > 60) nextWaitTime = 60;
-
-    cursor.classList.remove("flickering");
+    nextWaitTime = 50;
 
     //write the intro part of the title
     if (!titleIntroDone) {
+      beforeCursor.classList.remove("flickering");
+
       if (title.textContent.length === titleText.length) {
         titleIntroDone = true;
       } else {
         title.textContent = titleText.slice(0, title.textContent.length + 1);
       }
     } else {
+      beforeCursor.classList.remove("active");
+      afterCursor.classList.add("active");
       //write each passion one by one, leave the last one on the screen
       let passionText = passionList[passionListIdx];
       let passionLen = passionList[passionListIdx].length;
@@ -61,9 +64,7 @@ function updateMainTitle(timeStamp) {
               passion.textContent.length - 1
             );
           } else {
-            nextWaitTime = 500;
             erasing = false;
-            cursor.classList.add("flickering");
 
             passionListIdx++;
           }
@@ -72,9 +73,9 @@ function updateMainTitle(timeStamp) {
         //wrote the hole word, time to backtrack
         //unless it was the last passionList element, in which case return
         if (passionListIdx === passionList.length - 1) {
-          cursor.classList.add("flickering");
+          afterCursor.classList.add("flickering");
           setTimeout(() => {
-            cursor.style.display = "none";
+            afterCursor.style.display = "none";
           }, 3000);
 
           return;
@@ -82,7 +83,7 @@ function updateMainTitle(timeStamp) {
 
         if (!erasing) {
           erasing = true;
-          cursor.classList.add("flickering");
+          afterCursor.classList.add("flickering");
           nextWaitTime = 2000;
         } else {
           passion.textContent = passionText.slice(
@@ -116,10 +117,11 @@ let secondImg = document.querySelector(".about-me div + img");
 let firstText = document.querySelector(".about-me img + div");
 let secondText = document.querySelector(".about-me div:first-child");
 
-
 document.addEventListener("scroll", () => {
   if (scrollY >= 300) {
     firstImg.style.opacity = 1;
+  }
+  if (scrollY >= 600) {
     secondImg.style.opacity = 1;
   }
 });

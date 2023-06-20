@@ -29,7 +29,7 @@ html {
 
 /* NAVBAR */
 nav {
-  background-color: #ffdd88;
+  background-color: rgba(63, 64, 63, 1);
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -41,15 +41,35 @@ nav > div {
   align-items: center;
 }
 
-nav a {
-  text-decoration: none;
-  color: #000;
-  margin: 0 1rem;
+.home-link {
+  margin-left: 1rem;
 }
 
-.home-icon {
+.home-link img {
   width: 50px;
-  margin-left: 1rem;
+  transition: width 0.1s linear, height 0.4s linear; 
+}
+
+.home-link img:hover {
+  width: 55px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 1rem;
+  background-color: rgba(63, 64, 63, 1);
+  border: 3px solid rgba(63, 64, 63, 1);
+  width: 10ch;
+  text-align: center;
+  border-radius: 5px;
+  padding: 2% 5%;
+  /* background: red; */
+}
+
+.nav-links a:hover {
+  border: 3px solid #fff;
+  background: linear-gradient(to top right, rgba(63, 64, 63, 1) 5%, #00d4ff);
 }
 
 .nav-links {
@@ -60,7 +80,7 @@ nav a {
 /* MAIN */
 main.hero-section {
   /* background-color: #fceedc; */
-  background: linear-gradient(45deg, #fceedc, #fceedc 70%, white);
+  background: linear-gradient(to bottom right,#fff 70%, #090979);
   min-height: 800px;
   display: grid;
   grid-template-rows: 1fr 2fr;
@@ -90,7 +110,7 @@ main.hero-section {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   height: 8rem;
 }
 
@@ -117,6 +137,11 @@ span.cursor {
   position: relative;
   margin-left: 10px;
   opacity: 1;
+  display: none;
+}
+
+span.cursor.active {
+  display: inline;
 }
 
 span.cursor.flickering {
@@ -124,9 +149,7 @@ span.cursor.flickering {
 }
 
 @media (max-width: 900px) {
-  span.cursor {
-    display: none;
-  }
+  
   .title-divider {
     display: inline;
   }
@@ -179,7 +202,6 @@ span.cursor.flickering {
 }
 
 .hero-text {
-  
   grid-area: b;
   text-align: justify;
   text-justify: inter-word;
@@ -193,13 +215,13 @@ span.cursor.flickering {
 }
 
 .hero-text p {
-  background-image: url("../images/Rectangle_4130.svg");
-  background-repeat: no-repeat;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background:  linear-gradient(white, white) padding-box,
+  linear-gradient(to left, #090979, #00d4ff) border-box;
+  border: 5px solid transparent;
+  border-radius: 20px;
   position: relative;
-  top: 2rem;
-  padding: 50px 20px 20px 20px;
+  top: 3rem;
+  padding: 30px 20px;
 }
 
 
@@ -283,7 +305,7 @@ img + .about-me-text {
 }
 
 .about-me div + img {
-  transition: opacity 1s linear 0.5s;
+  transition: opacity 1s linear;
 }
 
 
