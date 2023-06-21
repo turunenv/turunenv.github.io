@@ -1,0 +1,56 @@
+---
+const { project } = Astro.props;
+console.log(project);
+---
+
+<section>
+  <h2>{project.title}</h2>
+  <div class="project-content">
+    <div class="img-container">
+      <img src={project.imgUrl}/>
+    </div>
+    <div class="text">{ project.details.description }</div>
+  </div>
+</section>
+
+<style>
+  section {
+  text-align: center;
+  background: linear-gradient(to bottom, #ffdd88 5%, #fff 5% 100%); 
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 2rem 0;
+  background: #787373;
+  border-radius: 1rem;
+  color: #fff;
+}
+
+.project-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  text-align: justify;
+  text-justify: inter-word;
+  
+}
+
+.project-content div {
+  width: 50%;
+  min-width: 350px;
+  padding: 2% 5%;
+}
+
+
+img {
+  max-width: 100%;
+}
+</style>

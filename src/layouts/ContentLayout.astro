@@ -1,0 +1,33 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { pageTitle } = Astro.props;
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <div class="background">
+    <div class="content-wrapper">
+      <h1>{pageTitle}</h1>
+      <slot />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 0px;
+    text-align: center;
+    padding-top: 2rem;
+  }
+  .background {
+    background-color: #ffdd88;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .content-wrapper {
+    width: 80%;
+    max-width: 1000px;
+  }
+</style>

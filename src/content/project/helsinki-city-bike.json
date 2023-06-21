@@ -1,0 +1,11 @@
+{
+  "title": "Helsinki City Bike App",
+  "imgUrl": "images/road-ahead.svg",
+  "github": "example.com",
+  "details": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quos dicta quas, maxime laboriosam ea provident repudiandae molestias praesentium! Nulla ullam unde aspernatur hic. Et numquam reprehenderit explicabo veniam excepturi nostrum architecto aliquid quae, mollitia commodi nesciunt natus temporibus perferendis, sapiente deleniti repudiandae cum soluta ut voluptates dignissimos? Facilis corporis iste repellendus alias ipsa ullam a voluptatem beatae ex nemo dolorum aut, voluptatum eligendi reprehenderit voluptates, minima, officiis enim ducimus rerum. Iusto tenetur omnis doloribus minima, laudantium, fugiat maiores atque magnam facilis beatae qui, esse suscipit. Natus, eaque sit consectetur consequatur qui dolore reprehenderit nesciunt blanditiis nihil quod, omnis fugiat.",
+
+    "technologies used": ["deno"],
+    "challenges": ["none"]
+  }
+}
