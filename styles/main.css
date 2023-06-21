@@ -79,8 +79,8 @@ nav > div {
 
 /* MAIN */
 main.hero-section {
-  /* background-color: #fceedc; */
-  background: linear-gradient(to bottom right,#fff 70%, #090979);
+  background: linear-gradient(to bottom,#fff 60%, #090979);
+  /* background: #ffdd88; */
   min-height: 800px;
   display: grid;
   grid-template-rows: 1fr 2fr;

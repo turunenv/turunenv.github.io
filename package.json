@@ -1,0 +1,18 @@
+{
+  "name": "home-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "Verneri Turunen",
+  "license": "ISC",
+  "dependencies": {
+    "astro": "^2.6.6"
+  }
+}
