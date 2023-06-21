@@ -9,3 +9,54 @@
     <a href="/blogs">Blogs</a>
   </div>
 </nav>
+
+<style>
+nav {
+  background-color: rgba(63, 64, 63, 1);
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+nav > div {
+  display: flex;
+  align-items: center;
+}
+
+.home-link {
+  margin-left: 1rem;
+}
+
+.home-link img {
+  width: 50px;
+  transition: width 0.1s linear, height 0.4s linear; 
+}
+
+.home-link img:hover {
+  width: 55px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 1rem;
+  background-color: rgba(63, 64, 63, 1);
+  border: 3px solid rgba(63, 64, 63, 1);
+  width: 10ch;
+  text-align: center;
+  border-radius: 5px;
+  padding: 2% 5%;
+  /* background: red; */
+}
+
+.nav-links a:hover {
+  border: 3px solid #fff;
+  background: linear-gradient(to top right, rgba(63, 64, 63, 1) 5%, #00d4ff);
+}
+
+.nav-links {
+  min-width: 20%;
+  justify-content: space-evenly;
+}
+</style>

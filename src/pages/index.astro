@@ -1,54 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <script src="../scripts/landingPage.js"></script>
 
 <BaseLayout pageTitle="turunenv Home Page">
-  <main class="hero-section">
-    <div class="main-title-container">
-      <h1 class="main-title">
-        <span class="title-intro"></span>
-        <span class="cursor flickering before-passion active"></span> <br class="title-divider">
-        <span class="title-passion"></span>
-        <span class="cursor after-passion"></span>
-      </h1>
-    </div>
-    <div class="hero-text">
-      <p>
-        Hi there! And welcome to my website. <br><br>
-        My name is Verneri, and I am an aspiring web developer from Finland. On this website, I tell a little bit about myself, show some previous projects I have been building, and in the future, hopefully share some interesting blogs. <br><br>
-        If you are an employer in need of a motivated junior full-stack developer, you are in the right place! You can find my contact details at the bottom of the page.
-      </p>
-      
-    </div>
-    <div class="hero-img-container">
-      <img 
-        srcset="../../images/hero-image-small.png 258w, ../../images/hero-image-med.png 356w, ../../images/hero-image.png 444w"
-        sizes= "(max-width: 500px) 258px, (max-width: 1200px) 356px, 444px"
-        src="../../images/hero-image.png" 
-        alt="a picture of Verneri Turunen"
-        >
-    </div>
-  </main>
-
-  <div class="about-me-container">
-    <section class="about-me">
-      <img src="../../images/about-me-hello.svg">
-      <div class="about-me-text">
-        <h2>About me</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis accusamus voluptates, quod omnis quo explicabo optio dolor, corporis similique voluptatibus placeat quibusdam sunt saepe eveniet repudiandae earum? Illo culpa voluptas cupiditate, necessitatibus sed provident vel quisquam fugit perferendis nam reprehenderit ducimus facere adipisci dolorem, placeat accusamus blanditiis consectetur dolorum.</p>
-      </div>
-      
-      
-    </section>
-    <section class="about-me">
-      <div class="about-me-text">
-        <h2>The road ahead</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio incidunt architecto magni! Quisquam voluptate corporis officiis deserunt iure quaerat inventore, maxime pariatur, quas necessitatibus omnis asperiores recusandae? Quod aperiam vel illum soluta eum saepe. Mollitia a ullam, voluptas voluptatem quos nam corrupti optio cum dicta, tempore laboriosam consequuntur perspiciatis.</p>
-      </div>
-      <img src="../../images/road-ahead.svg">
-      
-    </section>
-  </div>
+  <HeroSection />
+  <AboutMe />
 </BaseLayout>

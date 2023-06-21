@@ -1,0 +1,24 @@
+---
+import ContentLayout from "../layouts/ContentLayout.astro";
+import Project from "../components/Project.astro";
+
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("project");
+---
+
+<ContentLayout pageTitle="Projects">
+  <main>
+    {projects.map((project) => {
+     
+      return <Project project={project.data}/>
+    })}
+  </main>
+</ContentLayout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

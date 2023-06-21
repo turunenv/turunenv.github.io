@@ -1,0 +1,103 @@
+<div class="about-me-container">
+  <section class="about-me">
+    <img src="../../images/about-me-hello.svg">
+    <div class="about-me-text">
+      <h2>About me</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis accusamus voluptates, quod omnis quo explicabo optio dolor, corporis similique voluptatibus placeat quibusdam sunt saepe eveniet repudiandae earum? Illo culpa voluptas cupiditate, necessitatibus sed provident vel quisquam fugit perferendis nam reprehenderit ducimus facere adipisci dolorem, placeat accusamus blanditiis consectetur dolorum.</p>
+    </div>
+    
+    
+  </section>
+  <section class="about-me">
+    <div class="about-me-text">
+      <h2>The road ahead</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio incidunt architecto magni! Quisquam voluptate corporis officiis deserunt iure quaerat inventore, maxime pariatur, quas necessitatibus omnis asperiores recusandae? Quod aperiam vel illum soluta eum saepe. Mollitia a ullam, voluptas voluptatem quos nam corrupti optio cum dicta, tempore laboriosam consequuntur perspiciatis.</p>
+    </div>
+    <img src="../../images/road-ahead.svg">
+    
+  </section>
+</div>
+
+<style>
+  
+.about-me {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+
+.about-me-text {
+  width: 50%;
+  max-width: 800px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding: 40px 30px 20px 150px;
+  text-align: justify;
+  text-justify: inter-word;
+  transition: left 1s ease-out, right 1s ease-out;
+}
+
+img + .about-me-text {
+  padding: 40px 150px 20px 30px;
+}
+
+@media (max-width: 1200px) {
+  .about-me-text {
+    padding: 10px 30px;
+  }
+
+  img + .about-me-text {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-text {
+    width: 90%;
+    margin: 0 auto;
+  } 
+  .about-me-text {
+    padding: 10px 30px;
+  }
+
+  img + .about-me-text {
+    padding: 10px 30px;
+  }
+}
+
+.about-me img {
+  height: 300px;
+  width: 50%;
+  padding: 2rem;
+  position: relative;
+  opacity: 0;
+}
+
+@media (max-width: 700px) {
+  .about-me {
+    flex-direction: column;
+  }
+
+  .about-me img, .about-me-text {
+    width: 80%;
+  }
+
+  .about-me > img {
+    order: 2;
+  }
+
+  .about-me img + .about-me-text {
+    order: 1;
+  }
+}
+
+.about-me img:first-child {
+  transition: opacity 1s linear;
+}
+
+.about-me div + img {
+  transition: opacity 1s linear;
+}
+</style>

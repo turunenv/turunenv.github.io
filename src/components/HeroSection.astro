@@ -1,0 +1,175 @@
+<main>
+  <div class="main-title-container">
+    <h1>
+      <span class="title-intro"></span>
+      <span class="cursor flickering before-passion active"></span> <br class="title-divider">
+      <span class="title-passion"></span>
+      <span class="cursor after-passion"></span>
+    </h1>
+  </div>
+  <div class="hero-text">
+    <p>
+      Hi there! And welcome to my website. <br><br>
+      My name is Verneri, and I am an aspiring web developer from Finland. On this website, I tell a little bit about myself, show some previous projects I have been building, and in the future, hopefully share some interesting blogs. <br><br>
+      If you are an employer in need of a motivated junior full-stack developer, you are in the right place! You can find my contact details at the bottom of the page.
+    </p>
+    
+  </div>
+  <div class="hero-img-container">
+    <img 
+      srcset="../../images/hero-image-small.png 258w, ../../images/hero-image-med.png 356w, ../../images/hero-image.png 444w"
+      sizes= "(max-width: 500px) 258px, (max-width: 1200px) 356px, 444px"
+      src="../../images/hero-image.png" 
+      alt="a picture of Verneri Turunen"
+      >
+  </div>
+</main>
+
+<style>
+
+main {
+  /* background: linear-gradient(to bottom,#fff 60%, #090979); */
+  background: #ffdd88;
+  min-height: 800px;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 2fr 1fr; 
+  grid-template-areas: "a a"
+                       "b c";                 
+}
+
+@media (max-width: 900px) {
+  main.hero-section {
+    grid-template-areas: "a"
+                         "c" 
+                         "b";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    text-align: center;
+  }
+}
+
+
+
+.main-title-container {
+  grid-area: a;
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  height: 8rem;
+}
+
+
+.title-divider {
+  display: none;
+}
+
+span.title-passion {
+  line-height: 4rem;
+  background: linear-gradient(to left, #090979, #00d4ff);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: 
+  text;
+  color: transparent;
+}
+
+span.cursor {
+  width: 4px;
+  height: 3rem;
+  border: 0.5px solid black;
+  background-color: black;
+  position: relative;
+  margin-left: 10px;
+  opacity: 1;
+  display: none;
+}
+
+span.cursor.active {
+  display: inline;
+}
+
+span.cursor.flickering {
+  animation: 1s cursor infinite step-start;
+}
+
+@media (max-width: 900px) {
+  
+  .title-divider {
+    display: inline;
+  }
+
+}
+
+@keyframes cursor {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-img-container {
+  grid-area: c;
+}
+
+.hero-img-container > img {
+  position: relative;
+  bottom: 20%;
+  padding-right: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .hero-img-container > img {
+    bottom: 10%;
+  }
+}
+@media (max-width: 900px) {
+  .hero-img-container > img {
+    position: static;
+  }
+  .main-title-container {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .main-title-container {
+    padding-left: 5vw;
+    margin-bottom: 0px;
+  }
+}
+
+.hero-text {
+  grid-area: b;
+  text-align: justify;
+  text-justify: inter-word;
+  display: flex;
+  flex-direction: column;
+  
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 80%;
+  margin-left: 3rem;
+}
+
+.hero-text p {
+  background:  linear-gradient(white, white) padding-box,
+  linear-gradient(to left, #090979, #00d4ff) border-box;
+  border: 5px solid transparent;
+  border-radius: 20px;
+  position: relative;
+  top: 3rem;
+  padding: 30px 20px;
+}
+</style>
