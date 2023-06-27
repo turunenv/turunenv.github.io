@@ -1,11 +1,11 @@
 {
   "title": "Helsinki City Bike App",
-  "imgUrl": "images/road-ahead.svg",
-  "github": "example.com",
+  "imgUrl": "images/bike-journey.svg",
+  "github": "https://github.com/turunenv/helsinki-city-bike-app",
   "details": {
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quos dicta quas, maxime laboriosam ea provident repudiandae molestias praesentium! Nulla ullam unde aspernatur hic. Et numquam reprehenderit explicabo veniam excepturi nostrum architecto aliquid quae, mollitia commodi nesciunt natus temporibus perferendis, sapiente deleniti repudiandae cum soluta ut voluptates dignissimos? Facilis corporis iste repellendus alias ipsa ullam a voluptatem beatae ex nemo dolorum aut, voluptatum eligendi reprehenderit voluptates, minima, officiis enim ducimus rerum. Iusto tenetur omnis doloribus minima, laudantium, fugiat maiores atque magnam facilis beatae qui, esse suscipit. Natus, eaque sit consectetur consequatur qui dolore reprehenderit nesciunt blanditiis nihil quod, omnis fugiat.",
+    "description": "This app allows you to display data from a real-life dataset from city bike stations and journeys around the Helsinki region. You can also quickly search for stations or sort the journeys based on, for example, the distance travelled.",
 
-    "technologies used": ["deno"],
-    "challenges": ["none"]
+    "technologies": "React, Node.js, MySQL, Docker, Python",
+    "lessons":  "Validating and handling pagination of a large dataset."
   }
 }

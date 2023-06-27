@@ -1,11 +1,12 @@
 {
   "title": "Localstorage Todos",
-  "github": "example.com",
+  "github": "https://github.com/turunenv/localstorage-todo-app",
+  "onlineAt": "https://turunenv.github.io/localstorage-todo-app/",
   "imgUrl": "images/todo-app.PNG",
   "details": {
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quos dicta quas, maxime laboriosam ea provident repudiandae molestias praesentium! Nulla ullam unde aspernatur hic. Et numquam reprehenderit explicabo veniam excepturi nostrum architecto aliquid quae, mollitia commodi nesciunt natus temporibus perferendis, sapiente deleniti repudiandae cum soluta ut voluptates dignissimos? Facilis corporis iste repellendus alias ipsa ullam a voluptatem beatae ex nemo dolorum aut, voluptatum eligendi reprehenderit voluptates, minima, officiis enim ducimus rerum. Iusto tenetur omnis doloribus minima, laudantium, fugiat maiores atque magnam facilis beatae qui, esse suscipit. Natus, eaque sit consectetur consequatur qui dolore reprehenderit nesciunt blanditiis nihil quod, omnis fugiat.",
+    "description": "Just another todo-app, really? Yes, but this time with some added spice! Responsive desing, persistence via local storage, and timer-todos make this one just a little bit extra.",
 
-    "technologies used": ["React"],
-    "challenges": ["none"]
+    "technologies": "React",
+    "lessons": "Creating custom hooks, using the useRef hook and avoiding the timer falling out of sync."
   }
 }

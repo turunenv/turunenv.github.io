@@ -1,12 +1,13 @@
 {
   "title": "Quiz Time",
-  "imgUrl": "images/road-ahead.svg",
-  "github": "example.com",
+  "imgUrl": "images/quiz-time.PNG",
+  "github": "https://github.com/turunenv/quiz-time",
+  "onlineAt": "https://turunenv.github.io/localstorage-todo-app/",
   "details": {
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quos dicta quas, maxime laboriosam ea provident repudiandae molestias praesentium! Nulla ullam unde aspernatur hic. Et numquam reprehenderit explicabo veniam excepturi nostrum architecto aliquid quae, mollitia commodi nesciunt natus temporibus perferendis, sapiente deleniti repudiandae cum soluta ut voluptates dignissimos? Facilis corporis iste repellendus alias ipsa ullam a voluptatem beatae ex nemo dolorum aut, voluptatum eligendi reprehenderit voluptates, minima, officiis enim ducimus rerum. Iusto tenetur omnis doloribus minima, laudantium, fugiat maiores atque magnam facilis beatae qui, esse suscipit. Natus, eaque sit consectetur consequatur qui dolore reprehenderit nesciunt blanditiis nihil quod, omnis fugiat.",
+    "description": "It's quiz time! Create an account, and you can start creating multiple-choice questions, and answer the questions of others. Go to the statistics page to see how you are doing!",
 
-    "technologies used": ["deno"],
-    "challenges": ["none"]
+    "technologies": "Deno, Eta templates",
+    "lessons": "Handling authentication and protected routes."
   }
 }
 

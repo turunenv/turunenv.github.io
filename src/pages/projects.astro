@@ -10,7 +10,6 @@ const projects = await getCollection("project");
 <ContentLayout pageTitle="Projects">
   <main>
     {projects.map((project) => {
-     
       return <Project project={project.data}/>
     })}
   </main>
@@ -21,4 +20,7 @@ const projects = await getCollection("project");
     display: flex;
     flex-direction: column;
   }
+
+  
+
 </style>
