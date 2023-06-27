@@ -26,13 +26,13 @@ let nextWaitTime;
 function updateMainTitle(timeStamp) {
   if (start === undefined) {
     start = timeStamp;
-    nextWaitTime = 1500;
+    nextWaitTime = 1000;
   }
 
   const elapsed = timeStamp - start;
 
   if (prevTimeStamp !== timeStamp && elapsed >= nextWaitTime) {
-    nextWaitTime = 50;
+    nextWaitTime = 40;
 
     //write the intro part of the title
     if (!titleIntroDone) {
@@ -84,7 +84,7 @@ function updateMainTitle(timeStamp) {
         if (!erasing) {
           erasing = true;
           afterCursor.classList.add("flickering");
-          nextWaitTime = 2000;
+          nextWaitTime = 1000;
         } else {
           passion.textContent = passionText.slice(
             0,
@@ -93,13 +93,6 @@ function updateMainTitle(timeStamp) {
         }
       }
     }
-
-    // cursor.classList.add("flickering");
-    // setTimeout(() => {
-    //   cursor.style.display = "none";
-    // }, 2000);
-    // return;
-
     start = timeStamp;
   }
 
@@ -113,7 +106,7 @@ requestAnimationFrame(updateMainTitle);
 
 /* ABOUT ME SCROLL */
 let firstImg = document.querySelector(".about-me img:first-child");
-let secondImg = document.querySelector(".about-me div + img");
+let secondImg = document.querySelector(".about-me-text + .img-container img");
 let firstText = document.querySelector(".about-me img + div");
 let secondText = document.querySelector(".about-me div:first-child");
 
