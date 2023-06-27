@@ -1,6 +1,6 @@
 {
   "title": "Quiz Time",
-  "imgUrl": "images/quiz-time.PNG",
+  "imgUrl": "/publicImages/quiz-time.PNG",
   "github": "https://github.com/turunenv/quiz-time",
   "onlineAt": "https://turunenv.github.io/localstorage-todo-app/",
   "details": {

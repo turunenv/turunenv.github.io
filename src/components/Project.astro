@@ -1,5 +1,6 @@
 ---
 const { project } = Astro.props;
+import githubLogo from "../images/GitHub_Logo.png";
 ---
 
 <section>
@@ -22,7 +23,7 @@ const { project } = Astro.props;
         <p><b>Links: </b></p>
         <div>
           <a href={project.github} target="_blank">
-            <img class="github-img" src="/images/GitHub_Logo.png" alt="GitHub logo">
+            <img class="github-img" src={githubLogo} alt="GitHub logo">
           </a>
         </div>
         {project.onlineAt &&
@@ -66,12 +67,14 @@ h2 {
   color: #fff;
 }
 
+
 .project-content {
   display: flex;
   flex-wrap: wrap;
   margin: 1rem 0;
   justify-content: center;
   align-items: center;
+  line-height: 1.5rem;
 }
 
 .project-details {

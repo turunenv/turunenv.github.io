@@ -1,6 +1,6 @@
 {
   "title": "Helsinki City Bike App",
-  "imgUrl": "images/bike-journey.svg",
+  "imgUrl": "/publicImages/bike-journey.svg",
   "github": "https://github.com/turunenv/helsinki-city-bike-app",
   "details": {
     "description": "This app allows you to display data from a real-life dataset from city bike stations and journeys around the Helsinki region. You can also quickly search for stations or sort the journeys based on, for example, the distance travelled.",

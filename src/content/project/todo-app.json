@@ -2,7 +2,7 @@
   "title": "Localstorage Todos",
   "github": "https://github.com/turunenv/localstorage-todo-app",
   "onlineAt": "https://turunenv.github.io/localstorage-todo-app/",
-  "imgUrl": "images/todo-app.PNG",
+  "imgUrl": "/publicImages/todo-app.PNG",
   "details": {
     "description": "Just another todo-app, really? Yes, but this time with some added spice! Responsive desing, persistence via local storage, and timer-todos make this one just a little bit extra.",
 

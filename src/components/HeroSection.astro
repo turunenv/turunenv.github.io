@@ -1,3 +1,12 @@
+---
+import smallHeroImg from "../images/hero-image-small.png";
+import medHeroImg from "../images/hero-image-med.png";
+import normalHeroImg from "../images/hero-image.png";
+
+
+---
+
+
 <main>
   <div class="main-title-container">
     <h1>
@@ -17,9 +26,9 @@
   </div>
   <div class="hero-img-container">
     <img 
-      srcset="../../images/hero-image-small.png 258w, ../../images/hero-image-med.png 356w, ../../images/hero-image.png 444w"
+      srcset=`${smallHeroImg} 258w, ${medHeroImg} 356w, ${normalHeroImg} 444w`
       sizes= "(max-width: 500px) 258px, (max-width: 1200px) 356px, 444px"
-      src="../../images/hero-image.png" 
+      src=`${normalHeroImg}`
       alt="a picture of Verneri Turunen"
       >
   </div>
