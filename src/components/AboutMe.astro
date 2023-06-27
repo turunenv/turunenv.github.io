@@ -1,9 +1,11 @@
 <div class="about-me-container">
   <section class="about-me">
-    <img src="../../images/about-me-hello.svg">
+    <div class="img-container">
+      <img src="../../images/about-me-hello.svg">
+    </div>
     <div class="about-me-text">
       <h2>About me</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto officiis accusamus voluptates, quod omnis quo explicabo optio dolor, corporis similique voluptatibus placeat quibusdam sunt saepe eveniet repudiandae earum? Illo culpa voluptas cupiditate, necessitatibus sed provident vel quisquam fugit perferendis nam reprehenderit ducimus facere adipisci dolorem, placeat accusamus blanditiis consectetur dolorum.</p>
+      <p>I graduated in 2023 from Aalto University School of Business majoring in Business Analytics. During my studies, I found an unexpected passion for programming and tech, and completed a master level minor in Computer Science in the Web Technologies, Applications and Science study track. I also have a study place at the mathematics department in the University of Helsinki, where I have taken courses in the Theory of Computation  track. I love learning and creating new things, and the world of web development is the perfect place to get to do both of those things!</p>
     </div>
     
     
@@ -11,47 +13,57 @@
   <section class="about-me">
     <div class="about-me-text">
       <h2>The road ahead</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio incidunt architecto magni! Quisquam voluptate corporis officiis deserunt iure quaerat inventore, maxime pariatur, quas necessitatibus omnis asperiores recusandae? Quod aperiam vel illum soluta eum saepe. Mollitia a ullam, voluptas voluptatem quos nam corrupti optio cum dicta, tempore laboriosam consequuntur perspiciatis.</p>
+      <p>After graduating, I have been studying full time to strenghten my web development and programming skills with the goal of getting my foot in the industry. Competing against Computer Science majors and more experienced programmers, I understand that this will not be easy. However, I know that in the end my drive and relentless work ethic will get me there. Currently I am working on enhancing my core web dev skills with HTML, CSS and JavaScript, getting more hands-on experience with React and Node.js, and diving into TypeScript. To my future employer I can promise one thing: I will never stop learning and improving!</p>
     </div>
-    <img src="../../images/road-ahead.svg">
+    <div class="img-container">
+      <img src="../../images/road-ahead.svg">
+    </div>
     
   </section>
 </div>
 
 <style>
+
+
   
 .about-me {
+  width: 100%;
   background: #fff;
   display: flex;
   align-items: center;
-  margin-top: 40px;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+section:last-child {
+  margin-bottom: 4rem;
 }
 
 
 .about-me-text {
   width: 50%;
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 1.2rem;
   line-height: 2rem;
-  padding: 40px 30px 20px 150px;
   text-align: justify;
   text-justify: inter-word;
   transition: left 1s ease-out, right 1s ease-out;
 }
 
-img + .about-me-text {
-  padding: 40px 150px 20px 30px;
+.about-me-text p {
+  width: 60%;
+  min-width: 300px;
 }
 
-@media (max-width: 1200px) {
-  .about-me-text {
-    padding: 10px 30px;
-  }
-
-  img + .about-me-text {
-    padding: 10px 30px;
-  }
+.img-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 @media (max-width: 900px) {
   .hero-text {
@@ -68,23 +80,29 @@ img + .about-me-text {
 }
 
 .about-me img {
-  height: 300px;
-  width: 50%;
-  padding: 2rem;
-  position: relative;
+  /* height: 300px; */
+  width: 60%;
+  
+  max-width: 800px;
   opacity: 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .about-me {
     flex-direction: column;
   }
 
-  .about-me img, .about-me-text {
-    width: 80%;
+  .about-me-text {
+    width: 100%;
   }
 
-  .about-me > img {
+  .img-container {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+
+  .about-me .img-container {
     order: 2;
   }
 
@@ -93,11 +111,15 @@ img + .about-me-text {
   }
 }
 
-.about-me img:first-child {
-  transition: opacity 1s linear;
+@media (max-width: 1300px) {
+  .about-me-text p, 
+  .img-container img {
+    width: 70%;
+  }
+  
 }
 
-.about-me div + img {
+img {
   transition: opacity 1s linear;
 }
 </style>
