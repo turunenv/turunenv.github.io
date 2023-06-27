@@ -110,11 +110,17 @@ let secondImg = document.querySelector(".about-me-text + .img-container img");
 let firstText = document.querySelector(".about-me img + div");
 let secondText = document.querySelector(".about-me div:first-child");
 
+let firstImgOffset = firstImg.getBoundingClientRect().top + 30;
+let secondImgOffset = secondImg.getBoundingClientRect().top + 30;
+
+console.log(firstImgOffset, secondImgOffset);
+
 document.addEventListener("scroll", () => {
-  if (scrollY >= 300) {
+  console.log(scrollY);
+  if (scrollY + window.innerHeight >= firstImgOffset) {
     firstImg.style.opacity = 1;
   }
-  if (scrollY >= 600) {
+  if (scrollY + window.innerHeight >= secondImgOffset) {
     secondImg.style.opacity = 1;
   }
 });
